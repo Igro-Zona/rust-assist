@@ -1,0 +1,91 @@
+{
+	"editor.formatOnSave": true,
+	"editor.minimap.enabled": false,
+	"editor.mouseWheelZoom": true,
+	"emmet.showExpandedAbbreviation": "always",
+	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.triggerExpansionOnTab": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
+	},
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact",
+		"typescript": "typescriptreact",
+		"vue-html": "html",
+		"vue": "html",
+		"razor": "html",
+		"plaintext": "pug"
+	},
+	"emmet.excludeLanguages": ["typescript"],
+	"emmet.preferences": {
+		"output.reverseAttributes": true
+	},
+	"explorer.confirmDelete": false,
+	"explorer.sortOrder": "type",
+	"git.autofetch": true,
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"liveServer.settings.donotShowInfoMsg": true,
+	"material-icon-theme.activeIconPack": "react_redux",
+	"terminal.integrated.env.windows": {},
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editorAssociations": {
+		"*.copilotmd": "vscode.markdown.preview.editor"
+	},
+	"workbench.editor.empty.hint": "hidden",
+	"files.eol": "\n",
+	"editor.acceptSuggestionOnCommitCharacter": false,
+	"editor.acceptSuggestionOnEnter": "smart",
+	"editor.suggest.localityBonus": true,
+
+	"material-icon-theme.folders.associations": {
+		"entities": "bloc",
+		"features": "functions",
+		"composables": "hook",
+		"axios": "server"
+	},
+
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.configPath": "prettier.config.ts",
+	"prettier.documentSelectors": ["**/*.astro"],
+	"prettier.enable": true,
+	"prettier.enableDebugLogs": true,
+	"prettier.ignorePath": ".prettierignore",
+	"prettier.prettierPath": "./node_modules/prettier",
+	"prettier.requireConfig": false,
+	"prettier.resolveGlobalModules": false,
+	"prettier.useEditorConfig": true,
+	"prettier.withNodeModules": false,
+	"prettier.arrowParens": "always",
+	"prettier.bracketSameLine": false,
+	"prettier.bracketSpacing": true,
+	"prettier.embeddedLanguageFormatting": "auto",
+	"prettier.endOfLine": "lf",
+	"prettier.experimentalTernaries": false,
+	"prettier.htmlWhitespaceSensitivity": "css",
+	"prettier.insertPragma": false,
+	"prettier.jsxSingleQuote": false,
+	"prettier.printWidth": 120,
+	"prettier.proseWrap": "always",
+	"prettier.quoteProps": "consistent",
+	"prettier.requirePragma": false,
+	"prettier.semi": true,
+	"prettier.singleAttributePerLine": true,
+	"prettier.singleQuote": false,
+	"prettier.tabWidth": 4,
+	"prettier.trailingComma": "all",
+	"prettier.useTabs": true,
+	"prettier.vueIndentScriptAndStyle": false,
+	"css.validate": false,
+	"explorer.fileNesting.expand": false,
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"files.associations": {
+		"*.css": "tailwindcss",
+		"wrangler.json": "jsonc"
+	},
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	"tailwindCSS.classAttributes": ["class", "ui"],
+	"tailwindCSS.experimental.classRegex": [["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+	"eslint.useFlatConfig": true
+}
