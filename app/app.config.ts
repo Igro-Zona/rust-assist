@@ -1,6 +1,6 @@
 export default defineAppConfig({
 	icon: {
-		// size: <default-size>,
+		size: "1.25rem",
 		class: "icon",
 		mode: "svg",
 		cssLayer: "base",

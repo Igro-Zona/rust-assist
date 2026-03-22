@@ -1,8 +1,11 @@
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
 	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts", "@nuxt/image", "@nuxt/hints", "@nuxt/a11y", "@nuxtjs/seo"],
 	vite: {
+		plugins: [tailwindcss()],
 		optimizeDeps: { include: ["@vue/devtools-core", "@vue/devtools-kit"] },
 		build: {
 			rollupOptions: {
@@ -23,7 +26,7 @@ export default defineNuxtConfig({
 		defaults: {
 			weights: ["400 700"],
 			styles: ["normal"],
-			subsets: ["latin-ext", "latin"],
+			subsets: ["latin-ext", "latin", "cyrillic", "cyrillic-ext"],
 		},
 	},
 
@@ -31,7 +34,7 @@ export default defineNuxtConfig({
 		provider: "none",
 		serverBundle: false,
 		clientBundle: { scan: true, includeCustomCollections: true, sizeLimitKb: 4096 },
-		// customCollections: [{ prefix: <custom-name>, dir: <relative-path> }],
+		customCollections: [{ prefix: "assist", dir: "~/assets/icons" }],
 	},
 
 	site: {
