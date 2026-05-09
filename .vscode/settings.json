@@ -2,51 +2,60 @@
 	"editor.formatOnSave": true,
 	"editor.minimap.enabled": false,
 	"editor.mouseWheelZoom": true,
-	"emmet.showExpandedAbbreviation": "always",
-	"emmet.showSuggestionsAsSnippets": true,
-	"emmet.triggerExpansionOnTab": true,
-	"editor.codeActionsOnSave": {
-		"source.fixAll": "explicit"
-	},
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact",
-		"typescript": "typescriptreact",
-		"vue-html": "html",
-		"vue": "html",
-		"razor": "html",
-		"plaintext": "pug"
-	},
-	"emmet.excludeLanguages": ["typescript"],
-	"emmet.preferences": {
-		"output.reverseAttributes": true
-	},
-	"explorer.confirmDelete": false,
-	"explorer.sortOrder": "type",
-	"git.autofetch": true,
-	"js/ts.implicitProjectConfig.checkJs": true,
-	"liveServer.settings.donotShowInfoMsg": true,
-	"material-icon-theme.activeIconPack": "react_redux",
-	"terminal.integrated.env.windows": {},
-	"workbench.iconTheme": "material-icon-theme",
-	"workbench.editorAssociations": {
-		"*.copilotmd": "vscode.markdown.preview.editor"
-	},
-	"workbench.editor.empty.hint": "hidden",
-	"files.eol": "\n",
+	"editor.quickSuggestions": { "strings": true },
+	"editor.codeActionsOnSave": { "source.fixAll": "explicit" },
 	"editor.acceptSuggestionOnCommitCharacter": false,
 	"editor.acceptSuggestionOnEnter": "smart",
 	"editor.suggest.localityBonus": true,
-
-	"material-icon-theme.folders.associations": {
-		"entities": "bloc",
-		"features": "functions",
-		"composables": "hook",
-		"axios": "server"
-	},
-
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	// Setting Prettier as default formatter
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
+	"emmet.extensionsPath": ["C:/Users/Igro-Zona/Desktop/ABOBA/FutureTech"],
+	"emmet.showExpandedAbbreviation": "always",
+	"emmet.showSuggestionsAsSnippets": true,
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.preferences": { "output.reverseAttributes": true },
+
+	"terminal.integrated.fontFamily": "Cascadia Code, Consolas, Courier New",
+	"terminal.integrated.defaultProfile.windows": "PowerShell",
+	"terminal.integrated.env.windows": {},
+
+	"explorer.confirmDelete": false,
+	"explorer.sortOrder": "type",
+	"explorer.fileNesting.expand": false,
+
+	"js/ts.format.insertSpaceAfterConstructor": true,
+	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"js/ts.format.semicolons": "insert",
+	"js/ts.preferences.quoteStyle": "double",
+	"js/ts.preferGoToSourceDefinition": true,
+	"js/ts.referencesCodeLens.enabled": true,
+	"js/ts.referencesCodeLens.showOnAllFunctions": true,
+	"js/ts.implicitProjectConfig.checkJs": true,
+	"js/ts.inlayHints.parameterNames.enabled": "all",
+	"js/ts.updateImportsOnFileMove.enabled": "never",
+
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.colorTheme": "Dark Modern",
+	"workbench.browser.openLocalhostLinks": false,
+
+	"files.eol": "\n",
+
+	"git.autofetch": true,
+
+	"material-icon-theme.activeIconPack": "vue_vuex",
+
+	"files.associations": { "*.css": "tailwindcss" },
+
+	"tailwindCSS.classAttributes": ["class", "ui"],
+	"tailwindCSS.experimental.classRegex": [["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+
+	// PRETTIER SETTINGS START
+
+	// Prettier extension
 	"prettier.configPath": "prettier.config.ts",
-	"prettier.documentSelectors": ["**/*.astro"],
 	"prettier.enable": true,
 	"prettier.enableDebugLogs": true,
 	"prettier.ignorePath": ".prettierignore",
@@ -55,6 +64,8 @@
 	"prettier.resolveGlobalModules": false,
 	"prettier.useEditorConfig": true,
 	"prettier.withNodeModules": false,
+
+	// Prettier config
 	"prettier.arrowParens": "always",
 	"prettier.bracketSameLine": false,
 	"prettier.bracketSpacing": true,
@@ -74,18 +85,7 @@
 	"prettier.tabWidth": 4,
 	"prettier.trailingComma": "all",
 	"prettier.useTabs": true,
-	"prettier.vueIndentScriptAndStyle": false,
-	"css.validate": false,
-	"explorer.fileNesting.expand": false,
-	"editor.gotoLocation.multipleDefinitions": "goto",
-	"files.associations": {
-		"*.css": "tailwindcss",
-		"wrangler.json": "jsonc"
-	},
-	"editor.quickSuggestions": {
-		"strings": "on"
-	},
-	"tailwindCSS.classAttributes": ["class", "ui"],
-	"tailwindCSS.experimental.classRegex": [["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
-	"eslint.useFlatConfig": true
+	"prettier.vueIndentScriptAndStyle": false
+
+	// PRETTIER SETTINGS END
 }

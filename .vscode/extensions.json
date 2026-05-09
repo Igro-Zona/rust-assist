@@ -1,15 +1,14 @@
 {
 	"recommendations": [
+		"nuxt.mdc",
 		"dbaeumer.vscode-eslint",
 		"antfu.goto-alias",
 		"antfu.iconify",
 		"pkief.material-icon-theme",
-		"nuxt.mdc",
 		"nuxtr.nuxtr-vscode",
 		"esbenp.prettier-vscode",
 		"bradlc.vscode-tailwindcss",
 		"vue.volar",
-		"sdras.vue-vscode-snippets",
-		"ritwickdey.liveserver"
+		"sdras.vue-vscode-snippets"
 	]
 }

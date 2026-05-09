@@ -3,3 +3,5 @@ allowBuilds:
     esbuild: true
     sharp: true
     unrs-resolver: true
+nodeVersion: "22.22.0"
+saveExact: true

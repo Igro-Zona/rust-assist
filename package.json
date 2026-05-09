@@ -13,29 +13,26 @@
 		"prepare": "husky"
 	},
 	"dependencies": {
-		"@resvg/resvg-js": "2.6.2",
-		"@takumi-rs/core": "1.0.0-beta.9",
-		"nuxt": "^4.4.2",
-		"satori": "0.26.0",
-		"vue": "^3.5.30",
-		"vue-router": "^5.0.3"
+		"nuxt": "^4.4.4",
+		"vue": "^3.5.34",
+		"vue-router": "^5.0.6"
 	},
 	"devDependencies": {
 		"@nuxt/a11y": "1.0.0-alpha.1",
 		"@nuxt/eslint": "1.15.2",
 		"@nuxt/fonts": "0.14.0",
-		"@nuxt/hints": "1.0.2",
-		"@nuxt/icon": "2.2.1",
+		"@nuxt/hints": "1.1.1",
+		"@nuxt/icon": "2.2.2",
 		"@nuxt/image": "2.0.0",
 		"@nuxtjs/seo": "4.0.2",
+		"@tailwindcss/vite": "4.3.0",
 		"husky": "^9.1.7",
-		"lint-staged": "^16.4.0",
-		"prettier": "^3.8.1",
-		"prettier-plugin-tailwindcss": "^0.7.2",
-		"@tailwindcss/vite": "4.2.2",
-		"tailwindcss": "4.2.2",
-		"typescript": "^5.9.3",
-		"vue-tsc": "^3.2.6"
+		"lint-staged": "^17.0.3",
+		"prettier": "^3.8.3",
+		"prettier-plugin-tailwindcss": "^0.8.0",
+		"tailwindcss": "4.3.0",
+		"typescript": "^6.0.3",
+		"vue-tsc": "^3.2.8"
 	},
 	"lint-staged": {
 		"*.{js,ts,vue,css,md,json}": [

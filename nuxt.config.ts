@@ -5,8 +5,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts", "@nuxt/image", "@nuxt/hints", "@nuxt/a11y", "@nuxtjs/seo"],
 	vite: {
-		plugins: [tailwindcss()],
-		optimizeDeps: { include: ["@vue/devtools-core", "@vue/devtools-kit"] },
+		plugins: [tailwindcss({ optimize: true })],
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
