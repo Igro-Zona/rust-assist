@@ -7,10 +7,11 @@
 		--ui-color-neutral-900: #181818;
 		--ui-color-neutral-800: #222222;
 		--ui-color-neutral-700: #333333;
-		--ui-color-neutral-600: rgb(230 230 230 / 0.4);
+		--ui-color-neutral-600: #575757;
 		--ui-color-neutral-500: #b7b7b7;
 		--ui-color-neutral-400: #e6e6e6;
 
+		--ui-text-obscure: var(--ui-color-neutral-800);
 		--ui-text-dimmed: var(--ui-color-neutral-700);
 		--ui-text-muted: var(--ui-color-neutral-600);
 		--ui-text-toned: var(--ui-color-neutral-500);
@@ -19,18 +20,15 @@
 		--ui-text-inverted: var(--ui-color-neutral-900);
 
 		--ui-bg: var(--ui-color-neutral-900);
-		--ui-bg-muted: var(--ui-color-neutral-800);
-		--ui-bg-elevated: var(--ui-color-neutral-800);
-		--ui-bg-accented: var(--ui-color-neutral-700);
+		--ui-bg-obscure: var(--ui-color-neutral-800);
+		--ui-bg-dimmed: var(--ui-color-neutral-700);
+		--ui-bg-muted: var(--ui-color-neutral-600);
+		--ui-bg-toned: var(--ui-color-neutral-500);
+		--ui-bg-highlighted: var(--ui-color-neutral-400);
 		--ui-bg-inverted: white;
-
-		--ui-border: var(--ui-color-neutral-800);
-		--ui-border-muted: var(--ui-color-neutral-700);
-		--ui-border-accented: var(--ui-color-neutral-700);
-		--ui-border-inverted: white;
 
 		--ui-radius: 0.5rem;
 		--ui-header-height: --spacing(16);
-		--ui-container: 80rem;
+		--ui-container: 90rem;
 	}
 }
