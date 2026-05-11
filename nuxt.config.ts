@@ -3,9 +3,10 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
-	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts", "@nuxt/image", "@nuxt/hints", "@nuxt/a11y", "@nuxtjs/seo"],
+	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts", "@nuxt/image", "@nuxt/hints", "@nuxt/a11y", "@nuxtjs/seo", "reka-ui/nuxt"],
 	vite: {
 		plugins: [tailwindcss({ optimize: true })],
+		optimizeDeps: { include: ["tailwind-merge", "@vueuse/core"] },
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
@@ -33,7 +34,7 @@ export default defineNuxtConfig({
 		provider: "none",
 		serverBundle: false,
 		clientBundle: { scan: true, includeCustomCollections: true, sizeLimitKb: 4096 },
-		customCollections: [{ prefix: "assist", dir: "~/assets/icons" }],
+		customCollections: [{ prefix: "assist", dir: "./app/assets/icons" }],
 	},
 
 	site: {
