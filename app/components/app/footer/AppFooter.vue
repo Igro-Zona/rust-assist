@@ -2,7 +2,7 @@
 <template>
 	<footer class="bg-obscure">
 		<UiContainer>
-			<div class="border-muted flex flex-col justify-between gap-10 border-b pt-7.5 pb-20 md:flex-row md:border-none">
+			<div class="border-muted flex flex-col justify-between gap-13.5 border-b pt-7.5 md:flex-row md:border-none md:pb-20">
 				<div class="contents shrink-0 grow flex-col justify-between gap-10 md:flex">
 					<div class="space-y-5">
 						<AppLogo />
@@ -19,26 +19,24 @@
 					/>
 				</div>
 
-				<nav class="h-81 w-140 columns-3 gap-5 lg:w-160 lg:gap-4">
-					<FooterColumn
-						v-for="(column, index) in links"
-						:key="index"
-						v-bind="column"
-					/>
+				<FooterAccordion
+					class="md:hidden"
+					:items="items"
+				/>
 
-					<FooterSocials
-						v-bind="socials"
-						class="hidden md:flex"
-					/>
+				<FooterColumns
+					:items="items"
+					class="hidden h-81 max-w-140 columns-3 gap-0 md:block 2xl:max-w-160 2xl:gap-4 [&>*+*]:mt-7.5"
+				>
+					<FooterSocials v-bind="socials" />
 
-					<FooterLangSwitch class="hidden md:flex" />
-				</nav>
+					<FooterLangSwitch />
+				</FooterColumns>
 			</div>
 		</UiContainer>
 
-		<!-- bottom footer -->
 		<UiContainer class="md:border-muted text-xs leading-2 md:max-w-none md:border-t">
-			<div class="text-toned flex flex-col justify-between gap-7.5 py-7.5 pt-14 sm:pt-7.5 md:flex-row md:items-center md:gap-16">
+			<div class="text-toned md:links-center flex flex-col justify-between gap-7.5 py-7.5 pt-14 sm:pt-7.5 md:flex-row md:gap-16">
 				<div class="flex flex-col gap-1.5 xl:mr-20">
 					<UiLink
 						to="mailto:help@rustassist.com"
@@ -69,142 +67,55 @@
 </template>
 
 <script setup lang="ts">
-import type { FooterColumnProps } from "./FooterColumn.vue";
+import type { UiLinkProps } from "~/components/ui/UiLink.vue";
 import type { FooterSocialsProps } from "./FooterSocials.vue";
 
-const links: FooterColumnProps[] = [
+export type FooterItem = {
+	title: string;
+	links?: UiLinkProps[];
+};
+
+const items: FooterItem[] = [
 	{
 		title: "Предметы",
-		items: [
-			{
-				name: "Боеприпасы",
-				to: "#",
-			},
-			{
-				name: "Электричество",
-				to: "#",
-			},
-			{
-				name: "Ресурсы",
-				to: "#",
-			},
-			{
-				name: "Ловушки",
-				to: "#",
-			},
-			{
-				name: "Оружие",
-				to: "#",
-			},
-			{
-				name: "Конструкции",
-				to: "#",
-			},
-			{
-				name: "Развлечение",
-				to: "#",
-			},
-			{
-				name: "Еда",
-				to: "#",
-			},
-			{
-				name: "Одежда",
-				to: "#",
-			},
-			{
-				name: "Медикаменты",
-				to: "#",
-			},
-			{
-				name: "Компоненты",
-				to: "#",
-			},
-			{
-				name: "Инструменты",
-				to: "#",
-			},
+		links: [
+			{ label: "Боеприпасы" },
+			{ label: "Электричество" },
+			{ label: "Ресурсы" },
+			{ label: "Ловушки" },
+			{ label: "Оружие" },
+			{ label: "Конструкции" },
+			{ label: "Развлечение" },
+			{ label: "Еда" },
+			{ label: "Одежда" },
+			{ label: "Медикаменты" },
+			{ label: "Компоненты" },
+			{ label: "Инструменты" },
 		],
 	},
 	{
 		title: "Мир",
-		items: [
-			{
-				name: "Контейнеры",
-				to: "#",
-			},
-			{
-				name: "Собираемое",
-				to: "#",
-			},
-			{
-				name: "Деревья",
-				to: "#",
-			},
-			{
-				name: "Руды",
-				to: "#",
-			},
-			{
-				name: "Животные",
-				to: "#",
-			},
-			{
-				name: "Другое",
-				to: "#",
-			},
-			{
-				name: "Строительные блоки",
-				to: "#",
-			},
+		links: [
+			{ label: "Контейнеры" },
+			{ label: "Собираемое" },
+			{ label: "Деревья" },
+			{ label: "Руды" },
+			{ label: "Животные" },
+			{ label: "Другое" },
+			{ label: "Строительные блоки" },
 		],
 	},
 	{
 		title: "Утилиты",
-		items: [
-			{
-				name: "Калькулятор рейда",
-				to: "#",
-			},
-			{
-				name: "Калькулятор экскаватора",
-				to: "#",
-			},
-			{
-				name: "Калькулятор генов",
-				to: "#",
-			},
-		],
+		links: [{ label: "Калькулятор рейда" }, { label: "Калькулятор экскаватора" }, { label: "Калькулятор генов" }],
 	},
 	{
 		title: "Информация",
-		items: [
-			{
-				name: "О нас",
-				to: "#",
-			},
-			{
-				name: "Контакты",
-				to: "#",
-			},
-			{
-				name: "Поддержка",
-				to: "#",
-			},
-		],
+		links: [{ label: "О нас" }, { label: "Контакты" }, { label: "Поддержка" }],
 	},
 	{
 		title: "Блог",
-		items: [
-			{
-				name: "Обучающие",
-				to: "#",
-			},
-			{
-				name: "Электричество",
-				to: "#",
-			},
-		],
+		links: [{ label: "Обучающие" }, { label: "Электричество" }],
 	},
 ];
 const socials: FooterSocialsProps = {
@@ -216,9 +127,3 @@ const socials: FooterSocialsProps = {
 	],
 };
 </script>
-
-<style>
-nav > * + * {
-	margin-top: 1.5rem; /* same as space-y-6 */
-}
-</style>
