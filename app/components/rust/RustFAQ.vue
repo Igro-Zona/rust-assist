@@ -9,7 +9,7 @@
 			<div class="bg-muted text-heading-sm px-10 py-4">Рейд</div>
 		</div>
 
-		<div class="grid grid-cols-2 gap-5">
+		<div class="grid grid-cols-1 gap-5 md:grid-cols-2">
 			<div class="flex h-57.5 snap-y snap-mandatory scrollbar-none flex-col gap-2.5 overflow-y-auto">
 				<div class="bg-muted flex snap-start items-center justify-between rounded-[4px] px-4 py-2.5">
 					<span>Как начать играть в Rust?</span>
