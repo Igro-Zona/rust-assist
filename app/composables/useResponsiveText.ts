@@ -1,7 +1,7 @@
 import type { MaybeComputedElementRef } from "@vueuse/core";
 import { useElementSize } from "@vueuse/core";
 
-export default function (element: MaybeComputedElementRef, longText: string, shortText: string) {
+export default function (element: MaybeComputedElementRef, longText: string, shortText: string, margin: number) {
 	const { width } = useElementSize(element);
 	const longTextWidth = ref(0);
 
@@ -17,7 +17,7 @@ export default function (element: MaybeComputedElementRef, longText: string, sho
 		measureLongText();
 	});
 
-	const displayText = computed(() => (width.value >= longTextWidth.value ? longText : shortText));
+	const displayText = computed(() => (width.value + margin >= longTextWidth.value ? longText : shortText));
 
 	return { displayText };
 }
