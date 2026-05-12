@@ -2,6 +2,7 @@
 @import "./breakpoints.css";
 @import "./theme.css";
 @import "./typography.css";
+@import "./keyframes.css";
 
 html {
 	scroll-behavior: smooth;

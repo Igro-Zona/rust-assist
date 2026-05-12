@@ -1,0 +1,17 @@
+@keyframes accordion-animation-up {
+	0% {
+		height: var(--reka-accordion-content-height);
+	}
+	to {
+		height: 0;
+	}
+}
+
+@keyframes accordion-animation-down {
+	0% {
+		height: 0;
+	}
+	to {
+		height: var(--reka-accordion-content-height);
+	}
+}

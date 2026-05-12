@@ -4,6 +4,9 @@
 	body {
 		@apply text-default bg-default -tracking-3 antialiased scheme-dark;
 	}
+	:focus-visible {
+		@apply ring-primary ring-3 outline-none;
+	}
 }
 
 @theme default inline {
