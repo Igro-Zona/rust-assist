@@ -34,15 +34,7 @@
 			</UiGrid>
 		</UiSection>
 
-		<UiSection title="статьи о раст">
-			<UiGrid>
-				<UiReviewCard
-					v-for="(item, index) in items3"
-					v-bind="item"
-					:key="index"
-				/>
-			</UiGrid>
-		</UiSection>
+		<RustReviews />
 
 		<RustFAQ />
 	</UiContainer>
@@ -52,12 +44,12 @@
 
 <script setup lang="ts">
 import type { UiItemProps } from "./components/ui/UiItem.vue";
-import type { UiReviewCardProps } from "./components/ui/UiReviewCard.vue";
 import type { UiServerCardProps } from "./components/ui/UiServerCard.vue";
 
 const items: UiItemProps[] = [
 	{
 		title: "Боеприпасы",
+		icon: "assist:bomb",
 	},
 	{
 		title: "Боеприпасы",
@@ -130,30 +122,6 @@ const items2: UiItemProps[] = [
 	},
 	{
 		title: "Боеприпасы",
-	},
-];
-
-const items3: UiReviewCardProps[] = [
-	{
-		src: "/images/image.jpg",
-		title: "Как поменять язык в Раст: полная инструкция",
-		descrption:
-			"На результат сражения может повлиять даже малейшая задержка. Шанс на победу во многом зависит от реакции и точности. Но не всегда они зависят от самого игрока. Если пинг…",
-		to: "#",
-	},
-	{
-		src: "/images/image.jpg",
-		title: "Как поменять язык в Раст: полная инструкция",
-		descrption:
-			"На результат сражения может повлиять даже малейшая задержка. Шанс на победу во многом зависит от реакции и точности. Но не всегда они зависят от самого игрока. Если пинг…",
-		to: "#",
-	},
-	{
-		src: "/images/image.jpg",
-		title: "Как поменять язык в Раст: полная инструкция",
-		descrption:
-			"На результат сражения может повлиять даже малейшая задержка. Шанс на победу во многом зависит от реакции и точности. Но не всегда они зависят от самого игрока. Если пинг…",
-		to: "#",
 	},
 ];
 
