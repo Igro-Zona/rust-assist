@@ -1,9 +1,9 @@
 <template>
 	<section
 		:aria-label="title"
-		:class="twMerge(!unstyled && 'flex flex-col gap-2.5 md:gap-5', props.class)"
+		:class="twMerge(!unstyled && 'flex flex-col gap-2.5 sm:gap-5', props.class)"
 	>
-		<h2 class="text-heading-md uppercase">{{ title }}</h2>
+		<h2 class="text-2xl leading-none font-semibold uppercase md:text-4xl">{{ title }}</h2>
 
 		<slot />
 	</section>
