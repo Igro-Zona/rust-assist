@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 		provider: "none",
 		serverBundle: false,
 		clientBundle: { scan: true, includeCustomCollections: true, sizeLimitKb: 4096 },
-		customCollections: [{ prefix: "assist", dir: "./app/assets/icons" }],
+		customCollections: [{ prefix: "assist", dir: "./app/assets/icons", recursive: true }],
 	},
 
 	site: {
