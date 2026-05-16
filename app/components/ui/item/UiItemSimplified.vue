@@ -23,11 +23,11 @@
 import type { StyledComponentProps } from "~/global";
 import { twMerge } from "tailwind-merge";
 
-export interface UiItemProps extends StyledComponentProps {
+export interface UiItemSimplifiedProps extends StyledComponentProps {
 	title: string;
 	icon?: string | IconProps;
 	to?: string;
 }
 
-const props = defineProps<UiItemProps>();
+const props = defineProps<UiItemSimplifiedProps>();
 </script>
