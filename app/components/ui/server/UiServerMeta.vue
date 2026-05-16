@@ -1,7 +1,10 @@
 <template>
 	<div
 		:class="
-			twMerge(!unstyled && 'text-toned/50 flex flex-wrap gap-x-1.25 gap-y-1.5 text-xs leading-0 sm:gap-2.5 sm:text-sm', props.class)
+			twMerge(
+				!unstyled && 'text-toned/50 flex flex-wrap gap-x-1.25 gap-y-1.5 text-xs leading-none sm:gap-2.5 sm:text-sm',
+				props.class,
+			)
 		"
 	>
 		<UiServerAttr
