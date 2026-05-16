@@ -7,6 +7,7 @@ declare global {
 		name: string;
 		mode?: "svg" | "css";
 		size?: string | number;
+		class?: Class;
 		customize?: (content: string, name?: string, prefix?: string, provider?: string) => string;
 	}
 }
