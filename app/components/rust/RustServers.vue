@@ -1,5 +1,5 @@
 <template>
-	<UiSection title="рекомендукемые сервера">
+	<UiSection title="рекомендуемые сервера">
 		<UiGrid>
 			<UiServerCard
 				v-for="(server, index) in servers.slice(0, 9)"
