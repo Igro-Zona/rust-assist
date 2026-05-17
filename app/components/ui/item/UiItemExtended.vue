@@ -13,7 +13,7 @@
 		<div class="absolute inset-0 z-0 flex items-center justify-end">
 			<Icon
 				name="assist:points"
-				class="mask-repeat-no-repeat mask-size-cover pc:max-h-20 pc:max-w-57 h-full max-h-17 w-full max-w-43 mask-[linear-gradient(70deg,rgba(34,34,34,0)_0%,rgba(34,34,34,1)_100%)] text-[#484848]/30 group-hover:text-[#939393]/30 group-active:text-[#242424]/30"
+				class="pc:max-h-20 pc:max-w-57 h-full max-h-17 w-full max-w-43 mask-[linear-gradient(70deg,rgba(34,34,34,0)_0%,rgba(34,34,34,1)_100%)] text-[#484848]/30 group-hover:text-[#939393]/30 group-active:text-[#242424]/30"
 			/>
 		</div>
 
