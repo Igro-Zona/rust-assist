@@ -1,23 +1,10 @@
 allowBuilds:
-  "@parcel/watcher": true
-  esbuild: true
-  sharp: true
-  unrs-resolver: true
-  vue-demi: true
-minimumReleaseAgeExclude:
-  - brace-expansion@2.0.3
-  - brace-expansion@5.0.5
-  - picomatch@2.3.2
-  - serialize-javascript@7.0.5
-  - nuxt-og-image@6.2.5
-  - lodash@4.17.24
-  - unhead@2.1.13
-  - simple-git@3.36.0
-  - fast-xml-builder@1.1.7
-  - fast-uri@3.1.1
-  - fast-uri@3.1.2
-  - fast-xml-parser@5.7.0
+    "@parcel/watcher": true
+    esbuild: true
+    sharp: true
+    unrs-resolver: true
+    vue-demi: true
 nodeVersion: "22.22.2"
 overrides:
-  unhead@<2.1.13: ^2.1.13
+    unhead@<2.1.13: ^2.1.13
 saveExact: true

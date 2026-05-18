@@ -13,10 +13,7 @@
 						</p>
 					</div>
 
-					<FooterDownloadButton
-						class="md:max-w-105"
-						to="#!"
-					/>
+					<FooterDownloadLink class="md:max-w-105" />
 				</div>
 
 				<FooterAccordion
