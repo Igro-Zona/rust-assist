@@ -2,8 +2,7 @@
 	<div :class="twMerge(!unstyled && 'bg-muted/20 flex items-center gap-1.25 rounded-[2px] p-1.5', props.class)">
 		<Icon
 			v-if="icon"
-			class="size-3.25 sm:size-4"
-			v-bind="normalizeIconProps(icon)"
+			v-bind="normalizeIconProps(icon, 'size-3.25 sm:size-4')"
 		/>
 
 		<slot />

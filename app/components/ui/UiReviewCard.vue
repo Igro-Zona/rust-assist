@@ -1,10 +1,10 @@
 <template>
 	<article
 		:aria-label="title"
-		:class="twMerge(!unstyled && 'bg-obscure overflow-hidden rounded-xs', props.class)"
+		:class="twMerge(!unstyled && 'group bg-obscure relative overflow-hidden rounded-xs transition-colors', props.class)"
 	>
 		<slot name="header">
-			<div>
+			<div class="overflow-hidden">
 				<NuxtPicture
 					v-if="src"
 					quality="90"
@@ -17,7 +17,7 @@
 					class="block h-32.5 w-full 2xl:h-36.25"
 					:img-attrs="{
 						alt: '',
-						class: 'object-cover w-full h-full',
+						class: 'object-cover w-full h-full group-hover:scale-105 group-active:scale-105 transition-transform',
 					}"
 					sizes="400px"
 				/>
@@ -67,6 +67,8 @@
 				</slot>
 			</div>
 		</slot>
+
+		<slot />
 	</article>
 </template>
 

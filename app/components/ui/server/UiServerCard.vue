@@ -3,7 +3,7 @@
 		:class="
 			twMerge(
 				!unstyled &&
-					'has-hover:bg-dimmed bg-obscure pc:p-5 relative flex flex-col gap-2.5 rounded-sm p-3.75 transition-colors sm:gap-3.75',
+					'has-hover:bg-dimmed has-active:bg-dimmed bg-obscure pc:p-5 relative flex flex-col gap-2.5 rounded-sm p-3.75 transition-colors sm:gap-3.75',
 				props.class,
 			)
 		"
@@ -21,7 +21,7 @@
 		<UiLink
 			v-bind="link"
 			:aria-label="'Перейти на ' + title"
-			class="focus:ring-primary absolute inset-0 rounded-sm focus:ring-2"
+			class="absolute inset-0 rounded-sm"
 		/>
 	</div>
 </template>

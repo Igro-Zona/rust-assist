@@ -9,14 +9,19 @@
 			/>
 		</UiGrid>
 
-		<div class="-mr-7.5 flex snap-x snap-mandatory gap-2.5 overflow-x-auto sm:mr-0 sm:gap-5 lg:hidden">
+		<div class="-mr-7.5 flex snap-x snap-mandatory scrollbar-none gap-2.5 overflow-x-auto sm:mr-0 sm:gap-5 lg:hidden">
 			<UiReviewCard
 				v-for="(item, index) in items3"
 				v-bind="item"
 				:key="index"
-				class="max-w-75 shrink-0 grow snap-start focus:ring-inset md:max-w-100"
-				tabindex="0"
-			/>
+				class="has-hover:bg-dimmed has-active:bg-muted max-w-75 shrink-0 grow md:max-w-100"
+			>
+				<UiLink
+					v-bind="item.link"
+					:aria-label="'Перейти на статью: ' + item.title"
+					class="absolute inset-0"
+				/>
+			</UiReviewCard>
 		</div>
 	</UiSection>
 </template>

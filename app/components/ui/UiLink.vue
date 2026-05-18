@@ -34,7 +34,7 @@ export interface UiLinkProps extends Omit<NuxtLinkProps, "noPrefetch">, StyledCo
 }
 
 const props = defineProps<UiLinkProps>();
-const linkProps = reactiveOmit(props, ["label", "noEvents", "unstyled", "ariaCurrent", "to"]);
+const linkProps = reactiveOmit(props, ["label", "noEvents", "unstyled", "ariaCurrent", "to", "class"]);
 
 const route = useRoute();
 const targetPath = computed(() => props.to?.toString());
