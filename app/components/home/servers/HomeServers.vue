@@ -1,20 +1,20 @@
 <template>
 	<UiSection title="рекомендуемые сервера">
 		<UiGrid>
-			<UiServerCard
+			<ServersCard
 				v-for="(server, index) in servers.slice(0, 9)"
 				:key="index"
-				v-bind="server"
 				:class="[index > 4 && 'hidden sm:flex', index > 5 && 'hidden sm:hidden lg:flex']"
+				v-bind="server"
 			/>
 		</UiGrid>
 	</UiSection>
 </template>
 
 <script setup lang="ts">
-import type { UiServerCardProps } from "../ui/server/UiServerCard.vue";
+import type { ServersCardProps } from "./ServersCard.vue";
 
-const servers: UiServerCardProps[] = [
+const servers: ServersCardProps[] = [
 	{
 		title: "Сервер «Лучший»",
 		meta: {

@@ -1,7 +1,7 @@
 <template>
 	<UiSection title="скины">
 		<UiGrid class="hidden sm:grid sm:grid-cols-4 lg:grid-cols-6">
-			<UiItemSellable
+			<SkinsItem
 				v-for="(item, index) in items"
 				v-bind="item"
 				:key="index"
@@ -9,7 +9,7 @@
 		</UiGrid>
 
 		<div class="-mr-7.5 flex snap-x snap-mandatory scrollbar-none gap-2.5 overflow-x-auto sm:hidden">
-			<UiItemSellable
+			<SkinsItem
 				v-for="(item, index) in items"
 				v-bind="item"
 				:key="index"
@@ -20,9 +20,9 @@
 </template>
 
 <script setup lang="ts">
-import type { UiItemSellableProps } from "../ui/item/UiItemSellable.vue";
+import type { SkinsItemProps } from "./SkinsItem.vue";
 
-const items: UiItemSellableProps[] = [
+const items: SkinsItemProps[] = [
 	{ title: "Название скина", description: "Объект", image: "/static/skins/bullet-1.png", price: 12.54 },
 	{ title: "Название скина", description: "Объект", image: "/static/skins/bullet-2.png", price: 12.54 },
 	{ title: "Название скина", description: "Объект", image: "/static/skins/bullet-3.png", price: 12.54 },
