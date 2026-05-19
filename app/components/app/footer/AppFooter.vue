@@ -5,7 +5,10 @@
 			<div class="border-muted flex flex-col justify-between gap-13.5 border-b pt-7.5 md:flex-row md:border-none md:pb-20">
 				<div class="contents shrink-0 grow flex-col justify-between gap-10 md:flex">
 					<div class="space-y-5">
-						<AppLogo />
+						<UiLogo
+							as="h2"
+							class="w-fit text-xl"
+						/>
 						<p class="text-2xl leading-1 font-semibold md:max-w-47.5 md:text-xl">
 							Надёжный <br />
 							источник гайдов, калькуляторов <br />
