@@ -1,13 +1,33 @@
 <template>
-	<div class="flex items-center gap-2.5">
-		<div class="bg-highlighted aspect-square w-6 rounded-[6px] lg:w-7.5" />
-		<p class="text-default logo text-[1rem] font-bold uppercase md:text-[1.25rem] lg:text-[1.5rem]">rust assist</p>
-	</div>
+	<UiLink
+		to="/"
+		:class="twMerge(!unstyled && 'group hover:text-toned flex items-center gap-2.5 md:text-xl lg:text-2xl', props.class)"
+		v-bind="link"
+	>
+		<slot>
+			<div
+				class="bg-highlighted group-hover:bg-toned group-active:bg-inverted aspect-square w-6 rounded-sm lg:w-7.5"
+				data-trc
+			/>
+			<Primitive
+				:as="as ?? 'p'"
+				:as-child
+				class="leading-none font-bold uppercase"
+				data-trc
+			>
+				rust assist
+			</Primitive>
+		</slot>
+	</UiLink>
 </template>
 
-<style scoped>
-.logo {
-	line-height: 1;
-	letter-spacing: -0.03em;
+<script setup lang="ts">
+import type { StyledPrimitiveComponentProps } from "~/global";
+import type { UiLinkProps } from "./UiLink.vue";
+import { twMerge } from "tailwind-merge";
+
+export interface UiLogoProps extends StyledPrimitiveComponentProps {
+	link?: UiLinkProps;
 }
-</style>
+const props = defineProps<UiLogoProps>();
+</script>
