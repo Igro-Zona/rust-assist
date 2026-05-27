@@ -19,10 +19,22 @@
 					<FooterDownloadLink class="md:max-w-105" />
 				</div>
 
-				<FooterAccordion
-					class="md:hidden"
+				<UiAccordion
+					v-slot="{ item }"
+					as="nav"
 					:items="items"
-				/>
+					unstyled
+					class="md:hidden"
+				>
+					<ul class="text-toned space-y-1.5 py-2.5 pl-2.5 text-xs leading-2 font-medium">
+						<li
+							v-for="(link, idx) in (item as FooterItem).links"
+							:key="idx"
+						>
+							<UiLink v-bind="link" />
+						</li>
+					</ul>
+				</UiAccordion>
 
 				<FooterColumns
 					:items="items"
@@ -67,15 +79,18 @@
 </template>
 
 <script setup lang="ts">
+import type { Class } from "~/global.js";
 import type { UiLinkProps } from "~/components/ui/UiLink.vue";
 import type { FooterSocialsProps } from "./FooterSocials.vue";
+import type { AccordionItem } from "~/components/ui/UiAccordion.vue";
 
 export type FooterItem = {
 	title: string;
 	links?: UiLinkProps[];
+	class?: Class;
 };
 
-const items: FooterItem[] = [
+const items: AccordionItem[] = [
 	{
 		title: "Предметы",
 		links: [
