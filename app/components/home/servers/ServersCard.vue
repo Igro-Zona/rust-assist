@@ -1,5 +1,6 @@
 <template>
 	<div
+		role="group"
 		:class="
 			twMerge(
 				!unstyled &&

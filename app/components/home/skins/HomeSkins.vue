@@ -8,7 +8,7 @@
 			/>
 		</UiGrid>
 
-		<div class="-mr-7.5 flex snap-x snap-mandatory scrollbar-none gap-2.5 overflow-x-auto sm:hidden">
+		<div class="-mr-7.5 flex snap-x snap-mandatory gap-2.5 overflow-x-auto sm:hidden">
 			<SkinsItem
 				v-for="(item, index) in items"
 				v-bind="item"
