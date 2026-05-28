@@ -30,6 +30,19 @@ export default defineNuxtConfig({
 		},
 	},
 
+	image: {
+		screens: {
+			"pc": 416,
+			"xs": 576,
+			"sm": 736,
+			"md": 896,
+			"lg": 1056,
+			"xl": 1216,
+			"2xl": 1376,
+			"3xl": 1536,
+		},
+	},
+
 	icon: {
 		provider: "none",
 		serverBundle: false,
