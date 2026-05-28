@@ -41,5 +41,3 @@
 		</div>
 	</UiSection>
 </template>
-
-<script setup lang="ts"></script>
