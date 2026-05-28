@@ -3,7 +3,12 @@
 		:aria-label="title"
 		:class="twMerge(!unstyled && 'flex flex-col gap-2.5 sm:gap-5', props.class)"
 	>
-		<h2 class="text-2xl leading-none font-semibold uppercase md:text-4xl">{{ title }}</h2>
+		<slot
+			name="title"
+			:title="title"
+		>
+			<h2 class="text-2xl leading-none font-semibold uppercase md:text-4xl">{{ title }}</h2>
+		</slot>
 
 		<slot />
 	</section>
