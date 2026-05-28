@@ -17,7 +17,7 @@
 					class="block h-32.5 w-full 2xl:h-36.25"
 					:img-attrs="{
 						alt: '',
-						class: 'object-cover w-full h-full group-hover:scale-105 group-active:scale-105 transition-transform',
+						class: 'object-cover w-full h-full group-hover:scale-105 group-active:scale-105 sm:group-hover:scale-100 sm:group-active:scale-100 transition-transform',
 					}"
 					sizes="400px"
 				/>
@@ -61,7 +61,7 @@
 						<UiLink
 							v-bind="link"
 							label="Подробнее"
-							class="-tracking-2 bg-dimmed hover:bg-default rounded-[2px] px-2.5 py-1.5 text-xs leading-none md:px-7 md:py-2.25"
+							class="-tracking-2 bg-dimmed hover:bg-muted rounded-[2px] px-2.5 py-1.5 text-xs leading-none md:px-7 md:py-2.25"
 						/>
 					</div>
 				</slot>
@@ -74,10 +74,10 @@
 
 <script setup lang="ts">
 import type { StyledComponentProps } from "~/global";
-import type { UiLinkProps } from "./UiLink.vue";
+import type { UiLinkProps } from "~/components/ui/UiLink.vue";
 import { twMerge } from "tailwind-merge";
 
-export interface UiReviewCardProps extends StyledComponentProps {
+export interface ReviewsCardProps extends StyledComponentProps {
 	title: string;
 	descrption?: string;
 	src?: string;
@@ -86,6 +86,6 @@ export interface UiReviewCardProps extends StyledComponentProps {
 	meta?: string[];
 }
 
-const props = defineProps<UiReviewCardProps>();
+const props = defineProps<ReviewsCardProps>();
 const meta = ref([props.date, ...(props.meta ? props.meta : [])]);
 </script>
