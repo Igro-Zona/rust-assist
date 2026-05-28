@@ -2,8 +2,9 @@
 	<ConfigProvider :use-id="() => useId()">
 		<AppHeader />
 
-		<main>
-			<UiContainer class="flex flex-col gap-10 py-10 md:gap-15 md:py-15">
+		<main class="relative">
+			<UiContainer class="relative z-1 flex flex-col gap-10 py-10 md:gap-15 md:py-15">
+				<HomePromo />
 				<HomeStats />
 				<HomeSkins />
 				<HomeItems />
@@ -11,6 +12,8 @@
 				<HomeReviews />
 				<HomeFAQ />
 			</UiContainer>
+
+			<div class="absolute inset-x-0 top-0 h-346.25 bg-[url('/static/bg.svg')] bg-cover bg-no-repeat" />
 		</main>
 
 		<AppFooter />
