@@ -6,14 +6,12 @@
 	>
 		<slot>
 			<div
-				class="bg-highlighted group-hover:bg-toned group-active:bg-inverted aspect-square w-6 rounded-sm lg:w-7.5"
-				data-trc
+				class="bg-highlighted group-hover:bg-toned group-active:bg-inverted aspect-square w-6 rounded-sm transition-colors lg:w-7.5"
 			/>
 			<Primitive
 				:as="as ?? 'p'"
 				:as-child
-				class="leading-none font-bold uppercase"
-				data-trc
+				class="leading-none font-bold uppercase transition-colors"
 			>
 				rust assist
 			</Primitive>
