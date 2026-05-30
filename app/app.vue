@@ -3,7 +3,8 @@
 		<AppHeader />
 
 		<main class="relative">
-			<UiContainer class="relative z-1 flex flex-col gap-10 py-10 md:gap-15 md:py-15">
+			<UiContainer class="relative z-1 flex flex-col gap-10 pb-10 md:gap-15 md:pb-15">
+				<HomeHero />
 				<HomeChapters />
 				<HomePromo />
 				<HomeStats />
