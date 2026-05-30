@@ -1,6 +1,6 @@
 <template>
 	<header>
-		<UiContainer>
+		<UiContainer class="py-7.5">
 			<UiLogo />
 		</UiContainer>
 	</header>

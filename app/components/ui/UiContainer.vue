@@ -2,7 +2,7 @@
 	<Primitive
 		:as="as"
 		:as-child="asChild"
-		:class="twMerge(!unstyled && 'relative mx-auto w-full max-w-(--ui-container) overflow-hidden px-7.5 sm:px-17.5', props.class)"
+		:class="twMerge(!unstyled && 'relative mx-auto w-full max-w-(--ui-container) px-7.5 sm:px-17.5', props.class)"
 	>
 		<slot />
 	</Primitive>

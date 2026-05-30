@@ -1,5 +1,5 @@
 <template>
-	<div class="relative mb-20 overflow-visible">
+	<div class="relative -mx-7.5 mb-20 overflow-hidden px-7.5 sm:-mx-17.5 sm:px-17.5">
 		<UiGrid
 			as="ol"
 			class="sm:grid-flow-col sm:grid-rows-3"
@@ -28,7 +28,7 @@
 		</UiGrid>
 
 		<div
-			class="pc:-mr-30 absolute inset-0 -z-1 -mr-50 bg-[url('/static/human.svg')] bg-contain bg-bottom-right bg-no-repeat sm:top-30 sm:-mr-20 md:top-0 md:-mr-30 lg:bottom-21 xl:mr-0"
+			class="pc:-mr-30 absolute inset-0 top-20 -z-1 -mr-30 bg-[url('/static/human.svg')] bg-contain bg-bottom-right bg-no-repeat sm:top-30 sm:-mr-20 md:top-0 md:-mr-30 lg:bottom-21 xl:mr-0"
 		/>
 	</div>
 </template>
