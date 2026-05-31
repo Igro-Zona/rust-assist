@@ -2,7 +2,7 @@
 	<UiSection
 		title="удобный калькулятор рейда прямо в твоём телефоне"
 		unstyled
-		class="grid grid-cols-1 items-center gap-2.5 overflow-x-clip sm:grid-cols-2 sm:gap-x-4 md:gap-5"
+		class="relative grid grid-cols-1 items-center gap-2.5 overflow-visible sm:grid-cols-2 sm:gap-x-4 md:gap-5"
 	>
 		<template #title>
 			<div class="order-3 flex shrink-0 justify-center sm:order-1 md:justify-start">
@@ -39,5 +39,18 @@
 				class="bg-primary hover:text-default/40 order-4 justify-center rounded-xs p-3 leading-none font-semibold sm:order-4 md:p-4"
 			/>
 		</div>
+
+		<div
+			style="
+				background: linear-gradient(
+					180deg,
+					hsla(10, 55%, 35%, 0.75) 0%,
+					hsla(10, 35%, 20%, 0.75) 55%,
+					hsla(10, 20%, 10%, 0.75) 85%,
+					hsla(0, 0%, 9%, 0.75) 100%
+				);
+			"
+			class="absolute inset-x-0 -top-10 -z-1 mx-[-100%] h-256.25"
+		/>
 	</UiSection>
 </template>
