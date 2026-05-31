@@ -3,7 +3,7 @@
 	<UiLink
 		v-bind="link"
 		:unstyled="unstyled"
-		:class="twMerge('bg-default hover:bg-primary aspect-square rounded-xs', props.class)"
+		:class="twMerge('bg-default hover:bg-primary active:bg-primary/80 aspect-square rounded-xs transition-colors', props.class)"
 		:aria-label="link?.label"
 	>
 		<img
