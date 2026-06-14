@@ -1,7 +1,7 @@
 <template>
 	<UiLink
 		to="/"
-		:class="twMerge(!unstyled && 'group hover:text-toned flex items-center gap-2.5 md:text-xl lg:text-2xl', props.class)"
+		:class="twMerge(!unstyled && 'group hover:text-toned items-center gap-2.5 md:text-xl lg:text-2xl', props.class)"
 		v-bind="link"
 	>
 		<slot>
