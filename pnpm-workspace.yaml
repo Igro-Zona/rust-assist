@@ -1,18 +1,8 @@
 allowBuilds:
-  "@parcel/watcher": true
-  esbuild: true
-  sharp: true
-  unrs-resolver: true
-  vue-demi: true
+    "@parcel/watcher": true
+    esbuild: true
+    sharp: true
+    unrs-resolver: true
+    vue-demi: true
 nodeVersion: "22.22.2"
 saveExact: true
-overrides:
-  unhead@<2.1.13: ^2.1.13
-minimumReleaseAgeExclude:
-  - lint-staged@17.0.7
-  - tinyexec@1.2.4
-  - esbuild@0.28.1
-  - tar@7.5.16
-  - vite@7.3.5
-  - launch-editor@2.14.1
-  - js-yaml@4.1.2
