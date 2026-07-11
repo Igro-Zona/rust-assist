@@ -21,6 +21,12 @@
 			v-model="model"
 			class="w-full appearance-none focus:ring-0 disabled:cursor-not-allowed disabled:opacity-75"
 			v-bind="input"
+			@focus="emit('focus', $event)"
+			@blur="emit('blur', $event)"
+			@keydown="emit('keydown', $event)"
+			@keyup="emit('keyup', $event)"
+			@input="emit('input', $event)"
+			@change="emit('change', $event)"
 		/>
 
 		<span
@@ -49,5 +55,6 @@ export interface UiInputProps extends StyledPrimitiveComponentProps {
 }
 
 const props = defineProps<UiInputProps>();
+const emit = defineEmits(["focus", "blur", "keydown", "keyup", "input", "change"]);
 const model = defineModel<string>();
 </script>
