@@ -17,5 +17,7 @@
 		</main>
 
 		<AppFooter />
+
+		<AppOverlay />
 	</ConfigProvider>
 </template>
