@@ -23,6 +23,7 @@
 			:key="index"
 			:value="String(index)"
 			:class="contentClass"
+			aria-label="Содержимое"
 		>
 			<slot
 				:item="item"
