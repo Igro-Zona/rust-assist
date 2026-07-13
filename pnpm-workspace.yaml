@@ -5,6 +5,4 @@ allowBuilds:
     unrs-resolver: true
     vue-demi: true
 nodeVersion: "22.22.2"
-overrides:
-    unhead@<2.1.13: ^2.1.13
 saveExact: true

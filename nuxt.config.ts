@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	modules: ["@nuxt/eslint", "@nuxt/icon", "@nuxt/fonts", "@nuxt/image", "@nuxt/hints", "@nuxt/a11y", "@nuxtjs/seo", "reka-ui/nuxt"],
 	vite: {
 		plugins: [tailwindcss({ optimize: true })],
-		optimizeDeps: { include: ["tailwind-merge", "@vueuse/core"] },
+		optimizeDeps: { include: ["tailwind-merge", "@vueuse/core", "@vueuse/integrations/useFuse.js"] },
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
@@ -30,6 +30,19 @@ export default defineNuxtConfig({
 		},
 	},
 
+	image: {
+		screens: {
+			"pc": 416,
+			"xs": 576,
+			"sm": 736,
+			"md": 896,
+			"lg": 1056,
+			"xl": 1216,
+			"2xl": 1376,
+			"3xl": 1536,
+		},
+	},
+
 	icon: {
 		provider: "none",
 		serverBundle: false,
@@ -38,7 +51,7 @@ export default defineNuxtConfig({
 	},
 
 	site: {
-		// url: <site-hosting-url>,
+		url: "localhost:3000",
 		// name: <site-name>,
 		// defaultLocale: <site-locale>,
 		// title: <site-title>,

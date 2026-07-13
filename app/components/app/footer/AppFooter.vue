@@ -5,7 +5,10 @@
 			<div class="border-muted flex flex-col justify-between gap-13.5 border-b pt-7.5 md:flex-row md:border-none md:pb-20">
 				<div class="contents shrink-0 grow flex-col justify-between gap-10 md:flex">
 					<div class="space-y-5">
-						<AppLogo />
+						<UiLogo
+							as="h2"
+							class="w-fit text-xl"
+						/>
 						<p class="text-2xl leading-1 font-semibold md:max-w-47.5 md:text-xl">
 							Надёжный <br />
 							источник гайдов, калькуляторов <br />
@@ -16,10 +19,22 @@
 					<FooterDownloadLink class="md:max-w-105" />
 				</div>
 
-				<FooterAccordion
-					class="md:hidden"
+				<UiAccordion
+					v-slot="{ item }"
+					as="nav"
 					:items="items"
-				/>
+					unstyled
+					class="md:hidden"
+				>
+					<ul class="text-toned space-y-1.5 py-2.5 pl-2.5 text-xs leading-2 font-medium">
+						<li
+							v-for="(link, idx) in (item as FooterItem).links"
+							:key="idx"
+						>
+							<UiLink v-bind="link" />
+						</li>
+					</ul>
+				</UiAccordion>
 
 				<FooterColumns
 					:items="items"
@@ -64,15 +79,18 @@
 </template>
 
 <script setup lang="ts">
+import type { Class } from "~/global.js";
 import type { UiLinkProps } from "~/components/ui/UiLink.vue";
 import type { FooterSocialsProps } from "./FooterSocials.vue";
+import type { AccordionItem } from "~/components/ui/UiAccordion.vue";
 
 export type FooterItem = {
 	title: string;
 	links?: UiLinkProps[];
+	class?: Class;
 };
 
-const items: FooterItem[] = [
+const items: AccordionItem[] = [
 	{
 		title: "Предметы",
 		links: [

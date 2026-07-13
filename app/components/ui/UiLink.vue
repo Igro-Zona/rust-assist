@@ -7,11 +7,7 @@
 		:target="target ?? (external || isExternal ? '_blank' : undefined)"
 		:aria-current="resolveAriaCurrent"
 		:class="
-			twMerge(
-				!unstyled && 'hover:text-default active:text-highlighted inline-flex cursor-pointer transition-colors',
-				noEvents && 'pointer-events-none cursor-default',
-				props.class,
-			)
+			twMerge(!unstyled && 'hover:text-default active:text-highlighted inline-flex cursor-pointer transition-colors', props.class)
 		"
 	>
 		<slot>
@@ -29,12 +25,11 @@ import { twMerge } from "tailwind-merge";
 
 export interface UiLinkProps extends Omit<NuxtLinkProps, "noPrefetch">, StyledComponentProps {
 	label?: string;
-	noEvents?: true;
 	ariaCurrent?: AriaAttributes["aria-current"];
 }
 
 const props = defineProps<UiLinkProps>();
-const linkProps = reactiveOmit(props, ["label", "noEvents", "unstyled", "ariaCurrent", "to", "class"]);
+const linkProps = reactiveOmit(props, ["label", "unstyled", "ariaCurrent", "to", "class"]);
 
 const route = useRoute();
 const targetPath = computed(() => props.to?.toString());

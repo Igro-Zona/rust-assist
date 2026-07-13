@@ -1,15 +1,23 @@
 <template>
-	<UiContainer>
-		<UiLogo />
-	</UiContainer>
-	<UiContainer class="mt-200 flex flex-col gap-15 py-15">
-		<RustStats />
-		<RustSkins />
-		<RustItems />
-		<RustServers />
-		<RustReviews />
-		<RustFAQ />
-	</UiContainer>
+	<ConfigProvider :use-id="() => useId()">
+		<AppHeader />
 
-	<AppFooter />
+		<main class="overflow-x-clip">
+			<UiContainer class="flex flex-col gap-10 pb-10 md:gap-15 md:pb-15">
+				<HomeHero />
+				<HomeChapters />
+				<HomePromo />
+				<HomeStats />
+				<HomeSkins />
+				<HomeItems />
+				<HomeServers />
+				<HomeReviews />
+				<HomeFAQ />
+			</UiContainer>
+		</main>
+
+		<AppFooter />
+
+		<AppOverlay />
+	</ConfigProvider>
 </template>
